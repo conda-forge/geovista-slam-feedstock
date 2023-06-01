@@ -10,7 +10,7 @@ source:
   sha256: cef887445d5371c0932770d6f6500a06bffc7a7a8d55c42eb0d504301ce7bd0b
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
@@ -22,8 +22,8 @@ requirements:
     - setuptools-scm >=7
   run:
     - python >=3.8
-    - geovista
-    - iris
+    - geovista >=0.1
+    - iris >=3.2
     # remove this dependency from geovista>=0.2
     - appdirs
 
