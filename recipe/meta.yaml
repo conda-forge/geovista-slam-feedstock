@@ -6,26 +6,28 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: abe868542c3a628d53ee93aee7c481cd507c8e07e0da3c4d2fa912d316f44db2
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
-    - python >=3.9
+    - python {{ python_min }}
     - pip
     - setuptools >=61
     - setuptools-scm >=7
   run:
-    - python >=3.9
+    - python >={{ python_min }}
     - geovista >=0.2
     - iris >=3.2
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - slam 
 
