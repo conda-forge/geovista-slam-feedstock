@@ -9,6 +9,8 @@ Package license: BSD-3-Clause
 
 Summary: GeoVista utility to convert CF UGRID Local Area Model quad-cell meshes into structured rectilinear or curvilinear grids
 
+Development: https://github.com/bjlittle/geovista-slam
+
 GeoVista utility to convert CF UGRID Local Area Model quad-cell meshes into structured rectilinear or curvilinear grids
 
 Current build status
